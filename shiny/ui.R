@@ -4,7 +4,7 @@ pageWithSidebar(
 
   headerPanel('Tool to identify non-vegan ingredients in cosmetics.'),
   sidebarPanel(
-	textInput("ingredients", "Paste ingredients here, seperated by commas.", value = "Ingredient 1, Ingredient 2, etc.")
+	textInput("ingredients", "Paste ingredients here, seperated by commas.", value = "peanut")
   ),
   mainPanel(
 	DT::dataTableOutput("table")
