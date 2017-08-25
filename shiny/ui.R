@@ -7,6 +7,6 @@ pageWithSidebar(
 	textInput("ingredients", "Paste ingredients here, seperated by commas.", value = "Ingredient 1, Ingredient 2, etc.")
   ),
   mainPanel(
-    plotOutput('plot1')
-  )
+	DT::dataTableOutput("table")
+	)
 )
