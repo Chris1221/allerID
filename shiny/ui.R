@@ -2,7 +2,7 @@
 
 pageWithSidebar(
 
-  headerPanel('Tool to identify non-vegan ingredients in cosmetics.'),
+  headerPanel('allerID: Identifying allergens in free text using goldi.'),
   sidebarPanel(
 	h2("Which allergens?"),
 	p("Use the boxes below to select which allergens you're looking to avoid. You can select as many or as few as you want. Each comes from different sources, and these will be indicated in the output."),
