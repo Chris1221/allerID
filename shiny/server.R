@@ -9,10 +9,23 @@ function(input, output, session) {
 			
 			raw_go <- readLines("../data/init.txt")
 
-			if( input$milk ) {
-				#raw_go <- c(raw_go, readLines("data/milk.txt"))
-			} else if( as.factor( input$vegan ) ) {
+			if( as.integer( input$milk ) ) {
+				raw_go <- c(raw_go, readLines("../data/milk.txt"))
+			}
+			if( as.integer( input$vegan ) ) {
 				raw_go <- c(raw_go, readLines("../data/not_vegan.txt"))
+			}
+			
+			if( as.integer( input$eggs ) ) {
+			  raw_go <- c(raw_go, readLines("../data/egg.txt"))
+			}
+			
+			if( as.integer( input$nuts ) ) {
+			  raw_go <- c(raw_go, readLines("../data/tree-nut.txt"))
+			}
+			
+			if( as.integer( input$peanuts ) ) {
+			  raw_go <- c(raw_go, readLines("../data/peanut.txt"))
 			}
 				
 			raw_go <- iconv(raw_go,"WINDOWS-1252","UTF-8") #this might not be a silver bullet, check the encoding
@@ -66,9 +79,19 @@ function(input, output, session) {
 
 		if(goldi_output[i, 1] %in% readLines("../data/init.txt") ) goldi_output[i, "Source"] <- "Jim Halpert"
 
+		if(goldi_output[i, 1] %in% readLines("../data/milk.txt") ) goldi_output[i, "Source"] <- "https://www.foodallergy.org/common-allergens/milk"
 
+		if(goldi_output[i, 1] %in% readLines("../data/egg.txt") ) goldi_output[i, "Source"] <- "http://www.kidswithfoodallergies.org/page/egg-allergy.aspx"
+		
+		if(goldi_output[i, 1] %in% readLines("../data/tree-nut.txt") ) goldi_output[i, "Source"] <- "https://www.foodallergy.org/common-allergens/tree-nut"
+		
+		if(goldi_output[i, 1] %in% readLines("../data/peanut.txt") ) goldi_output[i, "Source"] <- "http://www.kidswithfoodallergies.org/page/peanut-allergy.aspx"
+		
 	}
-	goldi_output
+	
+	if(nrow(goldi_output) == 0) data.frame(There = "is nothing here.") else goldi_output
+	
+#	goldi_output
 	})
 	
 	output$table <- DT::renderDataTable({
