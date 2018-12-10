@@ -1,1 +1,151 @@
 
+@------------------------------------------------------@
+|     goldi     |     v1.0.1     |   3/Aug/2016   |
+| ---------------------------------------------------- |
+|         (C) Christopher B. Cole, MIT License         |
+| ---------------------------------------------------- |
+|  For documentation, citation, bug reports, and more: |
+|          http://github.com/Chris1221/goldi           |
+@ ---------------------------------------------------- @
+
+For your reference, here is a list of your input options:
+
+	terms:"You must put your terms here if not using a precomputed TDM."
+	local:FALSE
+	lims:c(0, 1, 2, 3)
+	output:"../output.txt"
+	syn:FALSE
+	syn.list:NULL
+	return.as.list:TRUE
+	log:"../log.txt"
+	reader:"local"
+
+To recreate this exact run at a later date, you may reinput these options.
+
+Note that any interactively created lists may be saved and inputed.
+
+@------------------------------------------------------@
+|     goldi     |     v1.0.1     |   3/Aug/2016   |
+| ---------------------------------------------------- |
+|         (C) Christopher B. Cole, MIT License         |
+| ---------------------------------------------------- |
+|  For documentation, citation, bug reports, and more: |
+|          http://github.com/Chris1221/goldi           |
+@ ---------------------------------------------------- @
+
+For your reference, here is a list of your input options:
+
+	terms:"You must put your terms here if not using a precomputed TDM."
+	local:FALSE
+	lims:c(0, 1, 2, 3)
+	output:"../output.txt"
+	syn:FALSE
+	syn.list:NULL
+	return.as.list:TRUE
+	log:"../log.txt"
+	reader:"local"
+
+To recreate this exact run at a later date, you may reinput these options.
+
+Note that any interactively created lists may be saved and inputed.
+
+@------------------------------------------------------@
+|     goldi     |     v1.0.1     |   3/Aug/2016   |
+| ---------------------------------------------------- |
+|         (C) Christopher B. Cole, MIT License         |
+| ---------------------------------------------------- |
+|  For documentation, citation, bug reports, and more: |
+|          http://github.com/Chris1221/goldi           |
+@ ---------------------------------------------------- @
+
+For your reference, here is a list of your input options:
+
+	terms:"You must put your terms here if not using a precomputed TDM."
+	local:FALSE
+	lims:c(0, 1, 2, 3)
+	output:"../output.txt"
+	syn:FALSE
+	syn.list:NULL
+	return.as.list:TRUE
+	log:"../log.txt"
+	reader:"local"
+
+To recreate this exact run at a later date, you may reinput these options.
+
+Note that any interactively created lists may be saved and inputed.
+
+@------------------------------------------------------@
+|     goldi     |     v1.0.1     |   3/Aug/2016   |
+| ---------------------------------------------------- |
+|         (C) Christopher B. Cole, MIT License         |
+| ---------------------------------------------------- |
+|  For documentation, citation, bug reports, and more: |
+|          http://github.com/Chris1221/goldi           |
+@ ---------------------------------------------------- @
+
+For your reference, here is a list of your input options:
+
+	terms:"You must put your terms here if not using a precomputed TDM."
+	local:FALSE
+	lims:c(0, 1, 2, 3)
+	output:"../output.txt"
+	syn:FALSE
+	syn.list:NULL
+	return.as.list:TRUE
+	log:"../log.txt"
+	reader:"local"
+
+To recreate this exact run at a later date, you may reinput these options.
+
+Note that any interactively created lists may be saved and inputed.
+
+@------------------------------------------------------@
+|     goldi     |     v1.0.1     |   3/Aug/2016   |
+| ---------------------------------------------------- |
+|         (C) Christopher B. Cole, MIT License         |
+| ---------------------------------------------------- |
+|  For documentation, citation, bug reports, and more: |
+|          http://github.com/Chris1221/goldi           |
+@ ---------------------------------------------------- @
+
+For your reference, here is a list of your input options:
+
+	terms:"You must put your terms here if not using a precomputed TDM."
+	local:FALSE
+	lims:c(0, 1, 2, 3)
+	output:"../output.txt"
+	syn:FALSE
+	syn.list:NULL
+	return.as.list:TRUE
+	log:"../log.txt"
+	reader:"local"
+
+To recreate this exact run at a later date, you may reinput these options.
+
+Note that any interactively created lists may be saved and inputed.
+
+@------------------------------------------------------@
+|     goldi     |     v1.0.1     |   3/Aug/2016   |
+| ---------------------------------------------------- |
+|         (C) Christopher B. Cole, MIT License         |
+| ---------------------------------------------------- |
+|  For documentation, citation, bug reports, and more: |
+|          http://github.com/Chris1221/goldi           |
+@ ---------------------------------------------------- @
+
+For your reference, here is a list of your input options:
+
+	terms:"You must put your terms here if not using a precomputed TDM."
+	local:FALSE
+	lims:c(0, 1, 2, 3)
+	output:"../output.txt"
+	syn:FALSE
+	syn.list:NULL
+	return.as.list:TRUE
+	log:"../log.txt"
+	reader:"local"
+
+To recreate this exact run at a later date, you may reinput these options.
+
+Note that any interactively created lists may be saved and inputed.
+
