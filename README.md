@@ -13,13 +13,13 @@ See https://ccole.shinyapps.io/allerID/ for a live demo with the data visible in
 To run the application, first use `git` to clone (download) it to a memorable location:
 
 ```sh
-git clone git@github.com:Chris1221/shiny_vegan.git
+git clone git@github.com:Chris1221/allerID.git
 ```
 
 Then, start `R`, and navigate to the same directory:
 
 ```R
-setwd("shiny_vegan")
+setwd("allerID")
 ```
 
 Install `goldi` and `shiny` (and maybe other dependencies), and launch away!
@@ -28,7 +28,7 @@ Install `goldi` and `shiny` (and maybe other dependencies), and launch away!
 install.packages("goldi")
 install.packages("shiny")
 
-shiny::runApp("shiny")
+shiny::runApp()
 ```
 
 Contributions are very much welcome, please see the relevant section in the app. If something breaks, please copy paste the `log.txt` provided by `goldi` as it will give me more information as to what happenned. 
