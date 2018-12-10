@@ -2,14 +2,18 @@
 
 This tool was written to help people find potential allergens in food and cosmetic labels, especially those ingredients that may be obscure and/or difficult to remember.  We compare the ingredients provided in several databases using a method implimented in [`goldi`](https://github.com/chris1221/goldi). Full details on the `goldi` implimentation are provided in relevant literature, however in brief `goldi` compares each ingredient (which may be several words long) to the relevant database using techniques borrowed from natural language processing and determines if there is enough evidence to match the terms. If the terms are matched, `allerID` returns the relevant entry and reports it back to you!
 
-### Live demo
+<h3 align="center">
+Live demo
+  </h3>
 
 **Please be gentle with the live version, I do not have much server time, so please do try to run locally if possible.**
 
 See https://ccole.shinyapps.io/allerID/ for a live demo with the data visible in this repository. Copy paste ingredient lists and voila!
 
-### Running the app locally 
-
+<h3 align="center">
+Running the app locally 
+</h3> 
+  
 To run the application, first use `git` to clone (download) it to a memorable location:
 
 ```sh
@@ -30,6 +34,8 @@ install.packages("shiny")
 
 shiny::runApp()
 ```
+
+---
 
 Contributions are very much welcome, please see the relevant section in the app. If something breaks, please copy paste the `log.txt` provided by `goldi` as it will give me more information as to what happenned. 
 
