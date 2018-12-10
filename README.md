@@ -23,6 +23,6 @@ install.packages("shiny")
 shiny::runApp("shiny")
 ```
 
-Contributions are very much welcome, please see the relevant section in the app. 
+Contributions are very much welcome, please see the relevant section in the app. If something breaks, please copy paste the `log.txt` provided by `goldi` as it will give me more information as to what happenned. 
 
 
