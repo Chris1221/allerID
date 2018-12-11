@@ -1,4 +1,4 @@
-![](img/logo.png)
+![](www/logo.png)
 
 ### A `shiny` server to identify various allergens from free text using `goldi`. 
 
