@@ -4,7 +4,9 @@ pageWithSidebar(
 
   headerPanel('Find allergens in lists of ingredients'),
   sidebarPanel(
-	h2("Which allergens?"),
+	#img(src='logo.png', align = "left", width=500 ),
+	img(src = 'logo.png', width = 200, align = "center"),
+	h3("Which allergens?"),
 	p("Use the boxes below to select which allergens you're looking to avoid. You can select as many or as few as you want. Each comes from different sources, and these will be indicated in the output."),
 	checkboxInput("milk", "Milk", FALSE),
 checkboxInput("eggs", "Eggs", FALSE),
