@@ -1,6 +1,6 @@
-![](www/logo.png)
-
-### A `shiny` server to identify various allergens from free text using `goldi`. 
+<p align="center">
+<img src="www/logo.png" alt="allerID" width="200pt">
+</p>
 
 This tool was written to help people find potential allergens in food and cosmetic labels, especially those ingredients that may be obscure and/or difficult to remember.  We compare the ingredients provided in several databases using a method implimented in [`goldi`](https://github.com/chris1221/goldi). Full details on the `goldi` implimentation are provided in relevant literature, however in brief `goldi` compares each ingredient (which may be several words long) to the relevant database using techniques borrowed from natural language processing and determines if there is enough evidence to match the terms. If the terms are matched, `allerID` returns the relevant entry and reports it back to you!
 
