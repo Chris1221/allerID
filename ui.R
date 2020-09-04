@@ -18,6 +18,8 @@ checkboxInput("vegan", "Vegan", TRUE),
 	hr(),
 	actionButton("ex", "Give me an example!"),
 	hr(),
+  textOutput("n"),
+  hr(),
 	helpText("Note: This information is by no means guarenteed to be correct and is only meant to help you make an informed decision about which products you choose to consume and use.")
   ),
   mainPanel(

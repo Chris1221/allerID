@@ -58,40 +58,56 @@ function(input, output, session) {
 	justString <- reactive(unlist(strsplit(input$ingredients, ", ")))
 
 	out <- reactive({
-		goldi::goldi(
-		doc = justString(),
-		#terms = c("peanut", "tallow"),
-		term_tdm = allergyTDM(),
-		lims = c(0,1,2,3),
-		output = "output.txt",
-		log = "log.txt",
-		object = TRUE,
-		reader = "local") %>%
-	as.data.frame -> goldi_output
-
-	# Process this to get the source
-	# 	This is pretty damn messy
-	
-	goldi_output$Source <- NA
-
-	for( i in 1:nrow(goldi_output) ){
-		if(goldi_output[i, 1] %in% readLines("data/not_vegan.txt") ) goldi_output[i, "Source"] <- "https://www.peta.org/living/other/animal-ingredients-list/"
-
-		if(goldi_output[i, 1] %in% readLines("data/init.txt") ) goldi_output[i, "Source"] <- "Jim Halpert"
-
-		if(goldi_output[i, 1] %in% readLines("data/milk.txt") ) goldi_output[i, "Source"] <- "https://www.foodallergy.org/common-allergens/milk"
-
-		if(goldi_output[i, 1] %in% readLines("data/egg.txt") ) goldi_output[i, "Source"] <- "http://www.kidswithfoodallergies.org/page/egg-allergy.aspx"
-		
-		if(goldi_output[i, 1] %in% readLines("data/tree-nut.txt") ) goldi_output[i, "Source"] <- "https://www.foodallergy.org/common-allergens/tree-nut"
-		
-		if(goldi_output[i, 1] %in% readLines("data/peanut.txt") ) goldi_output[i, "Source"] <- "http://www.kidswithfoodallergies.org/page/peanut-allergy.aspx"
-		
+	  
+	  str = justString()
+	  
+	  if (length(str) != 0) {
+  		goldi::goldi(
+  		doc = str,
+  		#terms = c("peanut", "tallow"),
+  		term_tdm = allergyTDM(),
+  		lims = c(0,1,2,3),
+  		output = "output.txt",
+  		log = "log.txt",
+  		object = TRUE,
+  		reader = "local") %>%
+  	as.data.frame -> goldi_output 
+	    
+	 if(nrow(goldi_output) == 0) {
+	   goldi_output = data.frame(Hooray = "There are no matches!")
+	 } else {
+  
+  	# Process this to get the source
+  	# 	This is pretty damn messy
+  	
+  	goldi_output$Source <- NA
+  
+  	for( i in 1:nrow(goldi_output) ){
+  		if(goldi_output[i, 1] %in% readLines("data/not_vegan.txt") ) goldi_output[i, "Source"] <- "https://www.peta.org/living/other/animal-ingredients-list/"
+  
+  		if(goldi_output[i, 1] %in% readLines("data/init.txt") ) goldi_output[i, "Source"] <- "Jim Halpert"
+  
+  		if(goldi_output[i, 1] %in% readLines("data/milk.txt") ) goldi_output[i, "Source"] <- "https://www.foodallergy.org/common-allergens/milk"
+  
+  		if(goldi_output[i, 1] %in% readLines("data/egg.txt") ) goldi_output[i, "Source"] <- "http://www.kidswithfoodallergies.org/page/egg-allergy.aspx"
+  		
+  		if(goldi_output[i, 1] %in% readLines("data/tree-nut.txt") ) goldi_output[i, "Source"] <- "https://www.foodallergy.org/common-allergens/tree-nut"
+  		
+  		if(goldi_output[i, 1] %in% readLines("data/peanut.txt") ) goldi_output[i, "Source"] <- "http://www.kidswithfoodallergies.org/page/peanut-allergy.aspx"
+  		
+  	} 
+  	
+	  }
+  	
+  	
+  	
+	} else {
+	  goldi_output = data.frame(Whoops = "You haven't given any input. Try writing some stuff in the box on the left.")
 	}
 	
-	if(nrow(goldi_output) == 0) data.frame(There = "is nothing here.") else goldi_output
+	#if(nrow(goldi_output) == 0) return(data.frame(There = "is nothing here.")) else return(goldi_output)
 	
-#	goldi_output
+	return(goldi_output)
 	})
 	
 	output$table <- DT::renderDataTable({
@@ -99,4 +115,5 @@ function(input, output, session) {
 			out()
 			)
 	}, escape = F)
+	
 }
